@@ -1,0 +1,50 @@
+body {
+    font-family: Montserrat;
+    color: aliceblue;
+    background-color: black;
+}
+
+.header {
+    position: absolute;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    top: 25%;
+    left: 40%;
+    transition: top 1s ease-out, left 1s ease-out, max-width 1s ease, opacity 1s ease;
+}
+
+.underlineIcon {
+    opacity: 0.8;
+    height: 5px;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.name {
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 3em;
+  }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+}
+  
+.separator {
+    margin: 0 10px;
+    color: white;
+}  
