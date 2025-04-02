@@ -1,7 +1,7 @@
 body {
     font-family: Montserrat;
-    color: aliceblue;
-    background-color: black;
+    color: rgb(255, 255, 255);
+    background-color: rgb(1, 2, 31);
 }
 
 .header {
@@ -14,37 +14,42 @@ body {
     transition: top 1s ease-out, left 1s ease-out, max-width 1s ease, opacity 1s ease;
 }
 
-.underlineIcon {
-    opacity: 0.8;
-    height: 5px;
-    width: 100%;
-    padding-top: 5px;
-}
-
-.name {
-    color: white;
-}
-
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 30px;
     font-size: 3em;
-  }
+    background-color: rgba(3, 5, 46, 0.603);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+}
 
 .nav-links {
     display: flex;
     align-items: center;
+    font-size: 25px;
+    margin-left: 20%;
+    margin-right: auto;
 }
   
 .nav-links a {
     text-decoration: none;
-    margin: 0 10px;
-    color: white;
+    margin: 0 150px;
+    color: rgb(255, 255, 255);
 }
-  
-.separator {
-    margin: 0 10px;
-    color: white;
-}  
+
+.accroche {
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 3%;
+    word-wrap: normal;
+    padding: 1px;
+}
+
+.titre-accroche {
+    font-size: 100px;
+}
+
+.phrase-accroche{
+    font-size: 30px;;
+}
