@@ -8,7 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script type="text/javascript">
+        function submitToAPI(e) {
+       e.preventDefault();
+       var URL = "https://4p3l49yvp4.execute-api.eu-north-1.amazonaws.com/dev";
+
+       var name = $("#name").val();
+       var desc = $("#contenu").val();
+       var data = {
+          name : name,
+          desc : desc
+        };
+
+       $.ajax({
+         type: "POST",
+         url : "https://abc1234.execute-api.us-east-1.amazonaws.com/01/contact",
+         dataType: "json",
+         crossDomain: "true",
+         contentType: "application/json; charset=utf-8",
+         data: JSON.stringify(data),
+
+         
+         success: function () {
+           alert("Successfull");
+           document.getElementById("contact-form").reset();
+       location.reload();
+         },
+         error: function () {
+           alert("UnSuccessfull");
+         }});
+     }
+    </script>
 </head>
 <body>
     <div class="navbar" id="navbar">
@@ -20,10 +50,21 @@
     </div>
 
     <div class="accroche">
+        <div class="cloud"></div>
         <h1 class="titre-accroche">
             L'avenir du numérique se construit dans le cloud et les réseaux.
         </h1>
         <a class="phrase-accroche">Passioné et rigoureux, je souhaite mettre mes compétences au service de projets innovant et défis technologiques.</a>
+    </div>
+    <div class="footer">
+        <p>Mon profil vous intéresse?</p>
+        <form method="post" enctype="text/plain" id="contact-form">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom">
+            <br>
+            <textarea class="contenu" id="contenu"></textarea>
+            <input type="submit" value="Envoyer" onClick="submitToAPI(event)">
+        </form>
     </div>
 </body>
 </html>
