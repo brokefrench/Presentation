@@ -94,3 +94,18 @@ input[name="nom"]{
     width: 700px;
     text-align: left;
 }
+
+.social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-list a {
+    margin: 0 20px;
+}
+
+.social-list img {
+    height: 100px;
+    width: 100px;
+}
